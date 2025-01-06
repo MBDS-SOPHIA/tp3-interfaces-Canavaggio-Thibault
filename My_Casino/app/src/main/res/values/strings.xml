@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">My Casino</string>
     <string name="roll">Lancer les dés</string>
-    <string name="congratulations">🎉 Félicitations ! Vous avez gagné ! 🎉</string>
-    <string name="try_again">Essayez encore !</string>
+    <string name="choose_target">Choisissez votre nombre (2-12)</string>
+    <string name="sum_format">Somme: %d</string>
+    <string name="win_message">Bravo ! Vous avez obtenu %d ! </string>
+    <string name="lose_message">Dommage ! Vous avez obtenu %1$d au lieu de %2$d</string>
 </resources>
