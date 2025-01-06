@@ -10,6 +10,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var resultText1: TextView
+    private lateinit var resultText2: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,16 +25,35 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Configuration du bouton de lancer de dé
+        // Initialisation des vues
+        resultText1 = findViewById(R.id.result_text1)
+        resultText2 = findViewById(R.id.result_text2)
+
+        // Configuration du bouton de lancer de dés
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
     }
 
     private fun rollDice() {
-        val resultText: TextView = findViewById(R.id.result_text)
-        val randomInt = (1..6).random()
-        resultText.text = randomInt.toString()
+        val randomInt1 = (1..6).random()
+        val randomInt2 = (1..6).random()
 
-        Toast.makeText(this, "Dé lancé!", Toast.LENGTH_SHORT).show()
+        resultText1.text = randomInt1.toString()
+        resultText2.text = randomInt2.toString()
+
+        // Vérification de la victoire
+        if (randomInt1 == randomInt2) {
+            Toast.makeText(
+                this,
+                getString(R.string.congratulations),
+                Toast.LENGTH_LONG
+            ).show()
+        } else {
+            Toast.makeText(
+                this,
+                getString(R.string.try_again),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 }

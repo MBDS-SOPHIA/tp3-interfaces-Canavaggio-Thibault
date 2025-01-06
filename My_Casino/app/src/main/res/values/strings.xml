@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">My Casino</string>
-    <string name="roll">Lancer</string>
+    <string name="roll">Lancer les dés</string>
+    <string name="congratulations">🎉 Félicitations ! Vous avez gagné ! 🎉</string>
+    <string name="try_again">Essayez encore !</string>
 </resources>
