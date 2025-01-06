@@ -5,6 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/brook_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:src="@drawable/brook"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/target_label"
+        android:contentDescription="@string/brook_description"/>
+
     <TextView
         android:id="@+id/target_label"
         android:layout_width="wrap_content"
@@ -51,21 +63,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/target_seekbar">
 
-        <TextView
-            android:id="@+id/result_text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:textSize="36sp"
-            android:layout_margin="16dp"/>
+        <ImageView
+            android:id="@+id/dice_image1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/dice_1"
+            android:contentDescription="@string/dice_one"/>
 
-        <TextView
-            android:id="@+id/result_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:textSize="36sp"
-            android:layout_margin="16dp"/>
+        <ImageView
+            android:id="@+id/dice_image2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/dice_1"
+            android:contentDescription="@string/dice_two"/>
     </LinearLayout>
 
     <TextView
@@ -74,20 +86,9 @@
         android:layout_height="wrap_content"
         android:text="@string/sum_format"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/roll_button"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice_container" />
-
-    <Button
-        android:id="@+id/roll_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/roll"
-        android:enabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sum_text" />
+        app:layout_constraintTop_toBottomOf="@+id/dice_container" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

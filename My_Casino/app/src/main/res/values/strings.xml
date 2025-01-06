@@ -5,4 +5,7 @@
     <string name="sum_format">Somme: %d</string>
     <string name="win_message">Bravo ! Vous avez obtenu %d ! </string>
     <string name="lose_message">Dommage ! Vous avez obtenu %1$d au lieu de %2$d</string>
+    <string name="dice_one">\n</string>
+    <string name="dice_two">\n</string>
+    <string name="brook_description">Image de Brook</string>
 </resources>
